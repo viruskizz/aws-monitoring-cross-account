@@ -5,8 +5,8 @@
   "main": "index.js",
   "scripts": {
     "start": "serverless offline --stage local --noAuth",
-    "deploy:dev": "serverless deploy --stage dev --region ap-southeast-1",
-    "deploy:prod": "serverless deploy --stage prod --region ap-southeast-1"
+    "deploy:dev": "serverless deploy --stage dev --region ap-southeast-1 --aws-profile demo-dev",
+    "deploy:prod": "serverless deploy --stage prod --region ap-southeast-1  --aws-profile demo-prod"
   },
   "repository": {
     "type": "git",
