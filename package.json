@@ -4,7 +4,9 @@
   "description": "aws monitoring cross account learning example",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "serverless offline --stage local --noAuth",
+    "deploy:dev": "serverless deploy --stage dev --region ap-southeast-1",
+    "deploy:prod": "serverless deploy --stage prod --region ap-southeast-1"
   },
   "repository": {
     "type": "git",
@@ -18,5 +20,9 @@
   "bugs": {
     "url": "https://github.com/viruskizz/aws-monitoring-cross-account/issues"
   },
-  "homepage": "https://github.com/viruskizz/aws-monitoring-cross-account#readme"
+  "homepage": "https://github.com/viruskizz/aws-monitoring-cross-account#readme",
+  "devDependencies": {
+    "serverless-dotenv-plugin": "^6.0.0",
+    "serverless-offline": "^13.5.0"
+  }
 }

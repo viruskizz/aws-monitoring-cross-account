@@ -4,7 +4,17 @@ frameworkVersion: '3'
 provider:
   name: aws
   runtime: nodejs18.x
+  apiGateway:
+      apiKeys:
+        - demoKey
 
 functions:
-  function1:
-    handler: index.handler
+  health:
+    handler: index.health
+    events:
+      - http:
+          method: GET
+          path: /health
+          cors: true
+          private: true
+
