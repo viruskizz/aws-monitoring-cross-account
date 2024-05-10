@@ -1,0 +1,30 @@
+service: cloudwatch-link-demo
+frameworkVersion: '3'
+useDotenv: true
+
+provider:
+  name: aws
+  region: ap-southeast-1
+
+functions:
+
+resources:
+  AWSTemplateFormatVersion: 2010-09-09
+  Conditions:
+    SkipMonitoringAccount: !Not
+      - !Equals
+        - !Ref AWS::AccountId
+        - "${env.MONITOR_ACCOUNT_ID}"
+  Resources:
+    Link:
+      Type: AWS::Oam::Link
+      Condition: SkipMonitoringAccount
+      Properties:
+        LabelTemplate: "$AccountName"
+        ResourceTypes: 
+          - "AWS::CloudWatch::Metric"
+          - "AWS::Logs::LogGroup"
+          - "AWS::XRay::Trace"
+          - "AWS::ApplicationInsights::Application"
+          - "AWS::InternetMonitor::Monitor"
+        SinkIdentifier: "${env:SINK_IDENTIFIER}"

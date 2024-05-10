@@ -25,6 +25,9 @@ Config profile `demo-prod` to deploy to production account
 
 ## Usage
 
+### Service config
+
+
 ### Run locally
 
 run service locally with `serverless-offline`

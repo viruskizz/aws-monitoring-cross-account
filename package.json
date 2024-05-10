@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "serverless offline --stage local --noAuth",
+    "link:dev": "serverless deploy  --config link-monitor.yml --stage -dev --region ap-southeast-1 --aws-profile demo-dev",
     "deploy:dev": "serverless deploy --stage dev --region ap-southeast-1 --aws-profile demo-dev",
     "deploy:prod": "serverless deploy --stage prod --region ap-southeast-1  --aws-profile demo-prod"
   },
