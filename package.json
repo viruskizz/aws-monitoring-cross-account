@@ -1,0 +1,22 @@
+{
+  "name": "aws-monitoring-cross-account",
+  "version": "1.0.0",
+  "description": "aws monitoring cross account learning example",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/viruskizz/aws-monitoring-cross-account.git"
+  },
+  "keywords": [
+    "aws"
+  ],
+  "author": "viruskizz",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/viruskizz/aws-monitoring-cross-account/issues"
+  },
+  "homepage": "https://github.com/viruskizz/aws-monitoring-cross-account#readme"
+}
