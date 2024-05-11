@@ -7,7 +7,7 @@ AWS CloudWatch monitoring cross accounts need 2 type of accounts
 The **Source Accounts** are metric and log data publisher to **Monitoring Account**
 This project is source account data publisher with **AWS Lambda**. It will feed healthy status to metric and log.
 
-## Prerequisist
+## Prerequisites
 
 ## Setup
 
@@ -37,3 +37,8 @@ npm run start
 ```
 
 ### Deploy to environment
+
+## Resources
+- https://www.youtube.com/watch?v=bfyThV6eSdg
+- https://www.youtube.com/watch?v=UbBZk9aCYj8
+- https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/CloudWatch-Unified-Cross-Account-Setup.html#Unified-Cross-Account-SetupSource-OrgTemplate

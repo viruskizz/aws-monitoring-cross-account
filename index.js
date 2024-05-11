@@ -4,8 +4,14 @@ module.exports.health = async (event) => {
     message: status ? 'healthy' : 'unhealty',
     status,
   }
-  console.log(data)
-  return response(data);
+  console.log(data);
+  if (event.source === 'aws.events' && !status) {
+    throw new Error('Unhealthy')
+  }
+  return {
+    statusCode: status ? 200 : 500,
+    body: JSON.stringify(data, null, 2),
+  }
 };
 
 function isHealthy() {
@@ -14,11 +20,4 @@ function isHealthy() {
   const rand = Math.floor(Math.random() * MAX);
   console.log(`Health Percentage: ${rand}/${BASE}`);
   return rand < BASE;
-}
-
-function response(data) {
-  return {
-    statusCode: 200,
-    body: JSON.stringify(data, null, 2),
-  }
 }
