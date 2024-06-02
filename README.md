@@ -5,7 +5,7 @@
 This repo is part of AWS Summit Bangkok 2024 at 30 May 2024.
 
 - [The presentation](https://docs.google.com/presentation/d/1sI5gvI13iF6mo3RT-yUZgG_c9hG42VUm/edit?usp=drive_link&ouid=117377256572461095430&rtpof=true&sd=true)
-- [Configuration] (https://youtu.be/EQK6Zg13oKc)
+- [Configuration](https://youtu.be/EQK6Zg13oKc)
 
 ## Overview
 
